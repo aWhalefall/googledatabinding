@@ -4,7 +4,7 @@ Data Binding 解决了 Android UI 编程的一个痛点，官方原生支持 MVV
 
 Data Binding 框架如果能够推广开来，也许 RoboGuice、ButterKnife 这样的依赖注入框架会慢慢失去市场，因为在 Java 代码中直接使用 View 变量的情况会越来越少。
 
-##准备
+## 准备
 
 新建一个 Project，确保 Android 的 Gradle 插件版本不低于 1.5.0-alpha1：
 
@@ -17,11 +17,11 @@ dataBinding {
 }
 ```
 
-##基础
+## 基础
 
 工程创建完成后，我们通过一个最简单的例子来说明 Data Binding 的基本用法。
 
-##布局文件
+## 布局文件
 
 使用 Data Binding 之后，xml 的布局文件就不再用于单纯地展示 UI 元素，还需要定义 UI 元素用到的变量。所以，它的根节点不再是一个 ViewGroup，而是变成了 layout，并且新增了一个节点 data。
 
@@ -42,7 +42,7 @@ dataBinding {
 
 下面我们使用 Data Binding 创建一个展示用户信息的表格。
 
-##数据对象
+## 数据对象
 
 添加一个 POJO 类 - User，非常简单，两个属性以及他们的 getter 和 setter。
 
@@ -103,7 +103,7 @@ public class Xuser implements Cloneable {
 
 例如，这里 xml 的文件名叫 activity_basic.xml，那么生成的类就是 ActivityBasicBinding。
 
-###注意
+### 注意
 
 java.lang.* 包中的类会被自动导入，可以直接使用，例如要定义一个 String 类型的变量：
 
@@ -153,4 +153,6 @@ setLastName(String lastName);
 ```
 
 至此，一个简单的数据绑定就完成了，可参考完整代码
+
+
 
