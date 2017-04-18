@@ -29,6 +29,7 @@
         <activity android:name=".activity.ListDataBindingTestActivity" />
         <activity android:name=".activity.ResourceTestActivity" />
         <activity android:name=".activity.IncludeActivity" />
+        <activity android:name=".activity.TestJumpActivity" />
     </application>
 
 </manifest>

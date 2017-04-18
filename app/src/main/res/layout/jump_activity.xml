@@ -38,16 +38,16 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="@{handlers.onClickFriend}"
-                    android:text="onclick(View)" />
+                    android:text="Event Handling" />
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:onClick="@{() -> jump.jump(context,index)}"
-                    android:text="带参数的跳转" />
+                    android:text="Method References" />
 
                 <Button
                     android:layout_width="match_parent"

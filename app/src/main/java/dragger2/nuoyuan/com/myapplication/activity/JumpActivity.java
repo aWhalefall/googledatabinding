@@ -11,6 +11,11 @@ import dragger2.nuoyuan.com.myapplication.HandleClickListener.MyHandlers;
 import dragger2.nuoyuan.com.myapplication.R;
 import dragger2.nuoyuan.com.myapplication.databinding.JumpActivityBinding;
 
+/**
+ *
+ *
+ */
+
 public class JumpActivity extends AppCompatActivity {
 
 
@@ -30,6 +35,7 @@ public class JumpActivity extends AppCompatActivity {
     public void openIncludes(View view) {
         startActivity(new Intent(this, IncludeActivity.class));
     }
+
     public void openCollections(View view) {
         startActivity(new Intent(this, ListDataBindingTestActivity.class));
     }

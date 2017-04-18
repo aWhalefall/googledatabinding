@@ -8,17 +8,20 @@ import dragger2.nuoyuan.com.myapplication.activity.IncludeActivity;
 import dragger2.nuoyuan.com.myapplication.activity.JumpActivity;
 import dragger2.nuoyuan.com.myapplication.activity.ObserverActivity;
 import dragger2.nuoyuan.com.myapplication.activity.ResourceTestActivity;
+import dragger2.nuoyuan.com.myapplication.activity.TestJumpActivity;
 import dragger2.nuoyuan.com.myapplication.activity.ViewStubActivity;
 
 /**
  * 弹出Toash
  */
 public class JumpHandler {
-    public void jump(JumpActivity view, int index) {
 
+    public void jump(JumpActivity view, int index) {
         Class clazz = null;
         switch (index) {
-
+            case 0:
+                clazz = TestJumpActivity.class;
+                break;
             case 1:
                 clazz = CLickTestActivity.class;
                 break;
@@ -39,6 +42,9 @@ public class JumpHandler {
                 break;
             case 7:
                 clazz = IncludeActivity.class;
+                break;
+            default:
+                clazz = JumpActivity.class;
                 break;
         }
         view.startActivity(new Intent(view, clazz));
