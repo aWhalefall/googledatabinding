@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="dragger2.nuoyuan.com.myapplication.bean.AnnoTationUser" />
+
+        <import type="dragger2.nuoyuan.com.myapplication.bean.StaticUser" />
+
+        <import type="android.databinding.ObservableMap"/>
+
+        <variable name="userMAP" type="ObservableMap&lt;String, Object&gt;"/>
+
+        <variable
+            name="user"
+            type="AnnoTationUser" />
+
+        <variable
+            name="staticuser"
+            type="StaticUser" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Observable Object"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/nameFormat(user.firstName, user.lastName)}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Observable Field"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/nameFormatWithAge(staticuser.firstName, staticuser.lastName, staticuser.age)}" />
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Observable Collection"
+        android:textStyle="bold" />
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{@string/nameFormatWithAge(userMAP[`firstName`], userMAP[`lastName`], 1 + (Integer)userMAP[`age`])}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setOtherName"
+                android:text="set other name" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setDefaultName"
+                android:text="set my name" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

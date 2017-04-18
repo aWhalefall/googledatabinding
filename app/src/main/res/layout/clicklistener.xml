@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="click"
+            type="dragger2.nuoyuan.com.myapplication.HandleClickListener.Presenter" />
+
+        <variable
+            name="handler"
+            type="dragger2.nuoyuan.com.myapplication.HandleClickListener.MyHandlers" />
+
+        <variable
+            name="user"
+            type="dragger2.nuoyuan.com.myapplication.bean.Xuser" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:onClick="@{(view)->click.onSaveClick(user) }"
+            android:text="@{user.firstName}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@{user.firstName}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:onClick="@{handler::onClickFriend}"
+            android:text="@{user.lastName}" />
+    </LinearLayout>
+</layout>
