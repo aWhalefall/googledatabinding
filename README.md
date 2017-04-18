@@ -155,4 +155,11 @@ setLastName(String lastName);
 至此，一个简单的数据绑定就完成了，可参考完整代码
 
 
+>引用
+
+ >   参考 db demo https://github.com/LyndonChin/MasteringAndroidDataBinding
+ 
+  > googledb 翻译 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0603/2992.html
+  
+  > 官方地址  https://developer.android.com/topic/libraries/data-binding/index.html#generated_binding
 
