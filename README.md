@@ -1,3 +1,14 @@
+
+
+
+
+![Cover](https://github.com/yatou252303/googledatabinding/blob/master/images/2.png?raw=true)
+
+![Cover](https://github.com/yatou252303/googledatabinding/blob/master/images/demo.png?raw=true)
+
+
+
+
 官方虽然已经给出了教程 - Data Binding Guide （中文版 - Data Binding（数据绑定）用户指南） ，但是实践之后发现槽点实在太多，于是就有了这个教程，针对每个知识点给出更详实的例子同时也总结了遇到的一些坑，希望对你有所帮助：）
 
 Data Binding 解决了 Android UI 编程的一个痛点，官方原生支持 MVVM 模型可以让我们在不改变既有代码框架的前提下，非常容易地使用这些新特性。
