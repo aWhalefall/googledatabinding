@@ -10,6 +10,7 @@ import dragger2.nuoyuan.com.myapplication.HandleClickListener.JumpHandler;
 import dragger2.nuoyuan.com.myapplication.HandleClickListener.MyHandlers;
 import dragger2.nuoyuan.com.myapplication.R;
 import dragger2.nuoyuan.com.myapplication.databinding.JumpActivityBinding;
+import dragger2.nuoyuan.com.myapplication.demo.model.activity.DemoActivity;
 
 /**
  *
@@ -60,5 +61,9 @@ public class JumpActivity extends AppCompatActivity {
 
     public void openAttributeSetters(View view) {
         startActivity(new Intent(this, AttributeSettersActivity.class));
+    }
+
+    public void fixdemo(View view) {
+        startActivity(new Intent(this, DemoActivity.class));
     }
 }

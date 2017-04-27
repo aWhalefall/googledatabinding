@@ -30,6 +30,9 @@
         <activity android:name=".activity.ResourceTestActivity" />
         <activity android:name=".activity.IncludeActivity" />
         <activity android:name=".activity.TestJumpActivity" />
+        <activity
+            android:name="dragger2.nuoyuan.com.myapplication.demo.model.activity.DemoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -97,11 +97,11 @@
                     android:onClick="openAttributeSetters"
                     android:text="Attribute Setters" />
 
-                <!--<Button-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:onClick="openConverters"-->
-                <!--android:text="Converters" />-->
+                <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="fixdemo"
+                android:text="混合使用例子" />
 
             </LinearLayout>
         </ScrollView>
