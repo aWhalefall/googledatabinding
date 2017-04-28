@@ -15,10 +15,12 @@ import rx.Subscriber;
  */
 
 public class MainViewModel {
+
     public ObservableField<Integer> contentViewVisibility;
     public ObservableField<Integer> progressBarVisibility;
     public ObservableField<Integer> errorInfoLayoutVisibility;
     public ObservableField<String> exception;
+
     private Subscriber<Movie> subscriber;
     private MovieAdapter movieAdapter;
     private CompletedListener completedListener;
@@ -31,6 +33,7 @@ public class MainViewModel {
     }
 
     private void getMovies() {
+
         subscriber = new Subscriber<Movie>() {
             @Override
             public void onCompleted() {
@@ -52,6 +55,7 @@ public class MainViewModel {
                 movieAdapter.addItem(movie);
             }
         };
+
         RetrofitHelper.getInstance().getMovies(subscriber, 0, 20);
     }
 
@@ -64,6 +68,7 @@ public class MainViewModel {
         progressBarVisibility = new ObservableField<>();
         errorInfoLayoutVisibility = new ObservableField<>();
         exception = new ObservableField<>();
+
         contentViewVisibility.set(View.GONE);
         errorInfoLayoutVisibility.set(View.GONE);
         progressBarVisibility.set(View.VISIBLE);

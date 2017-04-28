@@ -1,5 +1,6 @@
 package dragger2.nuoyuan.com.myapplication.demo.model.activity;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import dragger2.nuoyuan.com.myapplication.R;
+import dragger2.nuoyuan.com.myapplication.databinding.MovieMainBinding;
 
 
 public class DemoActivity extends AppCompatActivity {
@@ -15,11 +17,10 @@ public class DemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.movie_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        MovieMainBinding movieMainBinding = DataBindingUtil.setContentView(this, R.layout.movie_main);
+        Toolbar toolbar = movieMainBinding.toolbar;
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = movieMainBinding.fab;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

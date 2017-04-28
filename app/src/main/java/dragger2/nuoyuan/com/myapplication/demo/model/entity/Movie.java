@@ -105,7 +105,7 @@ public class Movie {
         this.images = images;
     }
 
-    private class Cast{
+    private class Cast {
         private String id;
         private String name;
         private String alt;
@@ -149,7 +149,7 @@ public class Movie {
         }
     }
 
-    public class Avatars{
+    public class Avatars {
         private String small;
         private String medium;
         private String large;

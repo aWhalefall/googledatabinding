@@ -32,10 +32,10 @@ public class MovieFragment extends Fragment implements CompletedListener, SwipeR
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View contentView = inflater.inflate(R.layout.movie_fragment, container, false);
-        movieFragmentBinding = MovieFragmentBinding.bind(contentView);
+        View view = inflater.inflate(R.layout.movie_fragment, container, false);
+        movieFragmentBinding = MovieFragmentBinding.bind(view);
         initData();
-        return contentView;
+        return view;
     }
 
     private void initData() {
@@ -43,8 +43,10 @@ public class MovieFragment extends Fragment implements CompletedListener, SwipeR
         movieFragmentBinding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         movieFragmentBinding.recyclerView.setItemAnimator(new DefaultItemAnimator());
         movieFragmentBinding.recyclerView.setAdapter(movieAdapter);
+
         movieFragmentBinding.swipeRefreshLayout.setColorSchemeResources(R.color.colorAccent, R.color.colorPrimary, R.color.colorPrimaryDark);
         movieFragmentBinding.swipeRefreshLayout.setOnRefreshListener(this);
+
         viewModel = new MainViewModel(movieAdapter, this);
         movieFragmentBinding.setViewModel(viewModel);
 
