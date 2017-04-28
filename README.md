@@ -163,6 +163,17 @@ setLastName(String lastName);
     android:text="@{user.lastName}" />
 ```
 
+###　Data Objects
+
+有三种不同的数据更改通知机制
+
+　Observable objects
+  Observable fields
+  Observable collection
+
+官方Demo :https://developer.android.com/topic/libraries/data-binding/index.html#data_objects
+ 
+
 至此，一个简单的数据绑定就完成了，可参考完整代码
 
 
